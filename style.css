@@ -1,0 +1,39 @@
+/* @CSS file */
+
+
+/* A NOTE ON word-break: 
+ *
+ * If you include styles to allow words to break and wrap, 
+ * be sure to exclude all content within tables. If targeted, the 
+ * tables will automatically shrink to fit the window, and the 
+ * responsive script will never fire.
+ * 
+ * You could consider using something like this:
+ *
+ * <allow this stuff to break words>:not(table *) {
+ * 	-ms-word-break: break-all;
+ * 	 word-break: break-all;
+ *	word-break: break-word;
+ * 	-webkit-hyphens: auto;
+ * 	-moz-hyphens: auto;
+ * 	hyphens: auto;
+ * }
+ * 
+ */
+
+
+/* Responsive tables */
+
+.table-responsive {
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.table-responsive::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+.table-responsive table {
+    max-width: 1280px; //  <-- this is entirely optional, but I like to leave it to prevent massive tables that are difficult to navigate.
+}
